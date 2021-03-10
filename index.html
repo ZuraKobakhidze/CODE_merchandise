@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE Merchandise</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="head">
+        <div class="container">
+            <div class="mainNav">
+                <div class="logo">
+                    <a href="index.html"><img src="img/code_logo.PNG" alt="logo" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="menu_bar">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="shop.html">PRODUCTS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="login.html">ACCOUNT</a></li>
+                    </ul>
+                </nav>
+                <img src="./img/menu.PNG" alt="menu" class="menu_img" onclick="menutoggle()">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Code But With <br>A Style</h1>
+                    <p>Keep it going.One day your code might <br>change the world,who knows.</p>
+                    <a href="shop.html" class="shopButton">SHOP</a>
+                </div>
+                <div class="col-2">
+                    <img src="./img/home_photo.PNG" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="products">
+        <div class="small-c">
+            <h1 class="products-title">Featured Products</h2>
+            <div class="row">
+                <div class="col-3">
+                    <img src="./img/codemerch_hoodie.PNG" alt="hoodie_image">
+                    <h5>Black CODE Hoodie</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>$59.99</p>
+                </div>
+                <div class="col-3">
+                    <img src="img/codemerch_mug.PNG" alt="mug_image">
+                    <h5>White CODE Mug</h5>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$14.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offer">
+        <div class="small-c">
+            <div class="row">
+                <div class="col-2">
+                    <img src="img/special_offer.PNG" alt="laptop" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively Available on CODE</p>
+                    <h1>Custimize Your Laptop's Back</h1>
+                    <small>We can individually customize your laptop's back with all the crazy things you can imagine and offer you with any size you want.</small>
+                    <a href="contact.html" class="offerButton">Offer Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="review">
+        <div class="small-c">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>I think it is a great way to bring fashion in programmers life.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <img src="./img/dimitri_tsikaridze.PNG" alt="dimitri">
+                    <h2>Dimitri Tsikaridze</h2>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>This is a really cool stuff and I am looking forward to see more from CODE.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <img src="img/luka_melikishvili.PNG" alt="luka">
+                    <h2>Luka Melikishvili</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="container">
+            <div class="row">
+                <div class="foot-col-2">
+                    <h2>Special Thanks</h2>
+                    <ul>
+                        <li>Noka Kipiani</li>
+                        <li>www.google.com</li>
+                    </ul>
+                </div>
+                <div class="foot-col-1">
+                    <img src="img/code_logo.PNG" alt="logo">
+                    <p>CODE is the company that gives joy to everyone <br>and brings style in our life.</p>
+                </div>
+                <div class="foot-col-3">
+                    <h2>Follow Us</h2>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var menu_bar = document.getElementById("menu_bar");
+        menu_bar.style.maxHeight = "0px";
+        function menutoggle(){
+            if(menu_bar.style.maxHeight == "0px"){
+                menu_bar.style.maxHeight = "200px";
+            }else{
+                menu_bar.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+</html>

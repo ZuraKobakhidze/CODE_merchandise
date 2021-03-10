@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CODE Merchandise</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <div class="head">
+            <div class="container">
+                <div class="mainNav">
+                    <div class="logo">
+                        <a href="index.html"
+                            ><img
+                                src="./img/code_logo.PNG"
+                                alt="logo"
+                                width="125px"
+                        /></a>
+                    </div>
+                    <nav>
+                        <ul id="menu_bar">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="shop.html">PRODUCTS</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                            <li><a href="login.html">ACCOUNT</a></li>
+                        </ul>
+                    </nav>
+                    <img
+                        src="./img/menu.PNG"
+                        alt="menu"
+                        class="menu_img"
+                        onclick="menutoggle()"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="account-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <img
+                            src="./img/login_image.PNG"
+                            width="100%"
+                            alt="image"
+                        />
+                    </div>
+                    <div class="col-2">
+                        <div class="form-c">
+                            <div class="form-button">
+                                <span onclick="login()">Login</span>
+                                <span onclick="register()">Register</span>
+                                <hr id="ind" />
+                            </div>
+
+                            <form id="login_form">
+                                <input
+                                    id="login_username"
+                                    type="text"
+                                    placeholder="Username"
+                                />
+                                <input
+                                    id="login_password"
+                                    type="password"
+                                    placeholder="Password"
+                                />
+                                <button
+                                    onclick="login_check()"
+                                    type="button"
+                                    class="button"
+                                >
+                                    Login
+                                </button>
+                                <a href="">Forgot password</a>
+                            </form>
+                            <form id="register_form">
+                                <input
+                                    id="register_username"
+                                    type="text"
+                                    placeholder="Username"
+                                />
+                                <input
+                                    id="register_email"
+                                    type="email"
+                                    placeholder="Email"
+                                />
+                                <input
+                                    id="register_password"
+                                    type="password"
+                                    placeholder="Password"
+                                />
+                                <button
+                                    onclick="register_check()"
+                                    type="button"
+                                    class="button"
+                                >
+                                    Register
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="container">
+                <div class="row">
+                    <div class="foot-col-2">
+                        <h2>Special Thanks</h2>
+                        <ul>
+                            <li>Noka Kipiani</li>
+                            <li>www.google.com</li>
+                        </ul>
+                    </div>
+                    <div class="foot-col-1">
+                        <img src="./img/code_logo.PNG" alt="logo" />
+                        <p>
+                            CODE is the company that gives joy to everyone
+                            <br />and brings style in our life.
+                        </p>
+                    </div>
+                    <div class="foot-col-3">
+                        <h2>Follow Us</h2>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var menu_bar = document.getElementById("menu_bar");
+            menu_bar.style.maxHeight = "0px";
+            function menutoggle() {
+                if (menu_bar.style.maxHeight == "0px") {
+                    menu_bar.style.maxHeight = "200px";
+                } else {
+                    menu_bar.style.maxHeight = "0px";
+                }
+            }
+
+            var login_form = document.getElementById("login_form");
+            var register_form = document.getElementById("register_form");
+            var ind = document.getElementById("ind");
+
+            function register() {
+                register_form.style.transform = "translateX(0px)";
+                login_form.style.transform = "translateX(0px)";
+                ind.style.transform = "translateX(100px)";
+            }
+
+            function login() {
+                register_form.style.transform = "translateX(300px)";
+                login_form.style.transform = "translateX(300px)";
+                ind.style.transform = "translateX(0px)";
+            }
+
+            var login_username = document.getElementById("login_username");
+            var login_password = document.getElementById("login_password");
+
+            function login_check() {
+                var success = 0;
+                if (login_username.value.length == 0) {
+                    console.log("Enter your username please");
+                } else {
+                    success += 1;
+                }
+                if (login_password.value.length == 0) {
+                    console.log("Enter your password please");
+                } else {
+                    success += 1;
+                }
+                if (success == 2) {
+                    console.log("Login success");
+                }
+            }
+
+            var register_username = document.getElementById(
+                "register_username"
+            );
+            var register_email = document.getElementById("register_email");
+            var register_password = document.getElementById(
+                "register_password"
+            );
+
+            function register_check() {
+                var success = 0;
+                if (register_username.value.length == 0) {
+                    console.log("Enter your username please");
+                } else {
+                    if (register_username.value.length < 6) {
+                        console.log(
+                            "Your username must contain at least 6 characters"
+                        );
+                    } else {
+                        console.log("Username success");
+                        success += 1;
+                    }
+                }
+                if (register_email.value.length == 0) {
+                    console.log("Enter your email please");
+                } else {
+                    var res = 0;
+                    for (var i = 0; i < register_email.value.length; i++) {
+                        if (register_email.value[i] == "@") {
+                            res += 1;
+                        }
+                    }
+                    if (res == 1) {
+                        console.log("Email success");
+                        success += 1;
+                    } else {
+                        console.log("Email failled,you may be missing @");
+                    }
+                }
+                if (register_password.value.length == 0) {
+                    console.log("Enter your password please");
+                } else {
+                    if (register_password.value.length < 8) {
+                        console.log(
+                            "Your password must contain at least 8 characters"
+                        );
+                    } else {
+                        var numbers = [
+                            "0",
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "5",
+                            "6",
+                            "7",
+                            "8",
+                            "9",
+                        ];
+                        var res = 0;
+                        for (var i = 0; i < numbers.length; i++) {
+                            for (
+                                var z = 0;
+                                z < register_password.value.length;
+                                z++
+                            ) {
+                                if (register_password.value[z] == numbers[i]) {
+                                    res += 1;
+                                }
+                            }
+                        }
+                        if (res > 0) {
+                            console.log("Password success");
+                            success += 1;
+                        } else {
+                            console.log(
+                                "Your password must contain at least one number"
+                            );
+                        }
+                    }
+                }
+                if (success == 3) {
+                    console.log("Registration success");
+                }
+            }
+        </script>
+    </body>
+</html>
